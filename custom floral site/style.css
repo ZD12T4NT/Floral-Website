@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  padding: 10px 20px;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "content1 content1 content1"
+    "content4 content4 content4"
+    "footer footer footer";
+  grid-gap: 0.2rem;
+}
+
+nav {
+  background: #fff;
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0 40px;
+}
+
+nav a {
+  color: #000;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+nav button {
+  background: #000;
+  border: 1px #000 solid;
+  color: #fef5f5;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #fff;
+  color: #000;
+}
+
+nav a:hover {
+  border-bottom: 2px #000 solid;
+}
+
+nav h1 {
+  font-size: 40px;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+
+main {
+  background: url("./flowers.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fef5f5;
+  line-height: 70px;
+}
+main,
+input {
+  border: none;
+  background-color: #ff49b32a;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+::placeholder {
+  color: #fff;
+}
+main h1 {
+  font-size: 80px;
+}
+
+main p {
+  font-size: 30px;
+}
+
+.text {
+  margin-left: 40px;
+}
+
+#content1 {
+  background: #fff;
+  grid-area: content1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+#content1 h1 {
+  position: absolute;
+  top: 95%;
+  left: 42%;
+  text-transform: uppercase;
+}
+#content1 h2 {
+  font-size: 40px;
+}
+
+#content1 h3 {
+  font-size: 25px;
+}
+
+#content1 p {
+  font-size: 15px;
+  text-align: center;
+}
+
+#content1 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 450px;
+}
+
+#content4 {
+  background: #fef5f5;
+  grid-area: content4;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+footer {
+  background: #2e2e2e;
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+footer > div {
+  height: 50vh;
+  width: 332px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  border-right: 2px #fff solid;
+}
+footer i {
+  font-size: 30px;
+}
+footer a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+footer button {
+  border: none;
+  background: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer h1 {
+  font-family: "Lobster", cursive;
+}
+
+.socials {
+  border: none;
+}
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.5fr 0.3fr 0.3fr 0.3fr 0.2fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
